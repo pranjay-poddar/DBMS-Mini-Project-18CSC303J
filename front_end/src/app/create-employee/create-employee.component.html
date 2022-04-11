@@ -1,0 +1,58 @@
+<br>
+<h3 class="text-center " style="margin-top: 10vh;">Add Employee</h3>
+<br>
+<div class="col-md-12">
+    <form (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" id="firstname" [(ngModel)]="employee.firstname" name="firstname">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" id="lastname" [(ngModel)]="employee.lastname" name="lastname">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Email Id</label>
+                    <input type="text" class="form-control" id="emailId" [(ngModel)]="employee.emailId" name="EmailId">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="number" class="form-control" id="phone" [(ngModel)]="employee.phone" name="phone">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Posting</label>
+                    <input type="text" class="form-control" id="posting" [(ngModel)]="employee.posting" name="posting">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Position</label>
+                    <input type="text" class="form-control" id="position" [(ngModel)]="employee.position" name="position">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Leaves</label>
+                    <input type="number" class="form-control" id="leaves" [(ngModel)]="employee.leaves" name="leaves">
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>

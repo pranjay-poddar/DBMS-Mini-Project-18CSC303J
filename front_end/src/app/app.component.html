@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">|||</span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" routerLink="/employees" routerLinkActive="itemActive">Employees list</a>
+            <a class="nav-link" routerLink="/create" routerLinkActive="itemActive">Add Employee</a>
+            <!-- <a class="nav-link" routerLink="/update" routerLinkActive="itemActive"></a> -->
+            <!-- <a class="nav-link" routerLink="/" routerLinkActive="itemActive"></a> -->
+            <!-- <a class="nav-link" routerLink="/" routerLinkActive="itemActive"></a> -->
+        </div>
+    </div>
+</nav>
+
+<div class="container marg">
+    <router-outlet>
+    </router-outlet>
+</div>
