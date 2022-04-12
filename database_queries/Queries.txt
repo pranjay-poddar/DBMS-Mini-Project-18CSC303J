@@ -1,0 +1,389 @@
+mysql> use test;
+Database changed
+mysql> tee /tmp/testspool.txt;
+Logging to file '/tmp/testspool.txt;'
+mysql> select name from emp;
+mysql> notee
+
+
+
+select emp.ename,l.empleave from employee emp join empleaves l on l.empid = emp.eid;
+
+SELECT DEP.DEPNAME,EMP.ENAME FROM DEPARTMENT DEP JOIN EMPLOYEE EMP ON DEP.DID = EMP.DEPID;
+
+select ename from employee where eid = 1;
+
+select depname from department where did > 1 AND did < 4;
+
+select ename from employee order by ename asc;
+
+select * from empleaves where empleave IS NOT NULL;
+
+select MAX(l.empleave) AS Maximum_Leaves,e.ename from empleaves l join employee e on l.empid = e.eid;
+
+select count(*) from employee where eid > 2;
+
+SELECT AVG(DEPID) FROM EMPLOYEE;
+
+ select ename,email,eid,depid from employee where ename like "s%";
+
+select count(did),depname,dsc from department group by depname;
+
+mysql> use emsdatabase;
+Database changed
+mysql> select emp.ename,l.empleave from employee emp join empleaves l on l.empid = emp.eid;
++-----------+----------+
+| ename     | empleave |
++-----------+----------+
+| SHREYANSH |        3 |
+| PRANJAY   |        6 |
+| SUBHO     |        1 |
+| SHREYANSH |        8 |
+| PRANJAY   |        3 |
++-----------+----------+
+5 rows in set (0.02 sec)
+
+mysql> SELECT DEP.DEPNAME,EMP.ENAME FROM DEPARTMENT DEP JOIN EMPLOYEE EMP ON DEP.DID = EMP.DEPID;
++----------------+-------------+
+| DEPNAME        | ENAME       |
++----------------+-------------+
+| FINANCE        | PRANJAY     |
+| GRAPHICS       | SHREYANSH   |
+| TECHNICAL      | NISHANT     |
+| HUMAN RESOURCE | SUBHO       |
+| HARDWARE       | ANKITA      |
+| GRAPHICS       | ankittiwari |
+| TECHNICAL      | rohan       |
+| HARDWARE       | sathwik     |
+| HUMAN RESOURCE | akash       |
+| HARDWARE       | aman        |
++----------------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> select ename from employee where eid = 1;
++---------+
+| ename   |
++---------+
+| PRANJAY |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select depname from department where did > 1 AND did < 4;
++----------------+
+| depname        |
++----------------+
+| GRAPHICS       |
+| HUMAN RESOURCE |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql> select ename from employee order by ename asc;
++-------------+
+| ename       |
++-------------+
+| akash       |
+| aman        |
+| ANKITA      |
+| ankittiwari |
+| NISHANT     |
+| PRANJAY     |
+| rohan       |
+| sathwik     |
+| SHREYANSH   |
+| SUBHO       |
++-------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from empleaves where empleave IS NOT NULL;
++-----+----------+-------+
+| lid | empleave | empid |
++-----+----------+-------+
+|   1 |        3 |     2 |
+|   2 |        6 |     1 |
+|   3 |        1 |     4 |
+|   4 |        8 |     2 |
+|   5 |        3 |     1 |
++-----+----------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select MAX(l.empleave) AS Maximum_Leaves,e.ename from empleaves l join employee e on l.empid = e.eid;
++----------------+-----------+
+| Maximum_Leaves | ename     |
++----------------+-----------+
+|              8 | SHREYANSH |
++----------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from employee where eid > 2;
++----------+
+| count(*) |
++----------+
+|        8 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT AVG(DEPID) FROM EMPLOYEE;
++------------+
+| AVG(DEPID) |
++------------+
+|     3.4000 |
++------------+
+1 row in set (0.00 sec)
+
+mysql>  select ename,email,eid,depid from employee where ename like "s%";
++-----------+----------------+-----+-------+
+| ename     | email          | eid | depid |
++-----------+----------------+-----+-------+
+| SHREYANSH | SP@GMAIL.COM   |   2 |     2 |
+| SUBHO     | SB12@GMAIL.COM |   4 |     3 |
+| sathwik   | sat@gmail.com  |   8 |     5 |
++-----------+----------------+-----+-------+
+3 rows in set (0.00 sec)
+
+mysql> select count(did),depname,dsc from department group by depname;
++------------+----------------+-----------------------+
+| count(did) | depname        | dsc                   |
++------------+----------------+-----------------------+
+|          1 | FINANCE        | DEAL WITH FINANCE     |
+|          1 | GRAPHICS       | DEAL WITH GRAPHICS    |
+|          1 | HUMAN RESOURCE | DEAL WITH HR          |
+|          1 | TECHNICAL      | DEAL WITH TECH        |
+|          1 | HARDWARE       | DEAL WITH HARDWARE    |
+|          1 | DEVELOPMENT    | DEAL WITH DEV TECH    |
+|          1 | MARKETING      | DEALS WITH PROMOTIONS |
+|          1 | ANALYTICS      | DEALS WITH STATS      |
+|          1 | CONTENT        | DEALS WITH CONTENT    |
+|          1 | SALES          | DEALS WITH SALES      |
++------------+----------------+-----------------------+
+10 rows in set (0.00 sec)
+
+mysql> select sum(depid), ename,pid,count(eid) from employee;
+ERROR 1054 (42S22): Unknown column 'pid' in 'field list'
+mysql> select sum(depid), ename,posid,eid from employee;
++------------+---------+-------+------+
+| sum(depid) | ename   | posid | eid  |
++------------+---------+-------+------+
+|         34 | PRANJAY |     2 |    1 |
++------------+---------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> select ename where depid = 2;
+ERROR 1054 (42S22): Unknown column 'ename' in 'field list'
+mysql> select ename from employee where depid = 2;
++-------------+
+| ename       |
++-------------+
+| SHREYANSH   |
+| ankittiwari |
++-------------+
+2 rows in set (0.00 sec)
+
+mysql> select sum(depid), ename,pid,count(eid) from employee;
+ERROR 1054 (42S22): Unknown column 'pid' in 'field list'
+mysql> select sum(depid), ename,posid,eid from employee;
++------------+---------+-------+------+
+| sum(depid) | ename   | posid | eid  |
++------------+---------+-------+------+
+|         34 | PRANJAY |     2 |    1 |
++------------+---------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> select sum(depid), ename,posid,eid from employee;
++------------+---------+-------+------+
+| sum(depid) | ename   | posid | eid  |
++------------+---------+-------+------+
+|         34 | PRANJAY |     2 |    1 |
++------------+---------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> select count(username) from login;
++-----------------+
+| count(username) |
++-----------------+
+|               5 |
++-----------------+
+1 row in set (0.02 sec)
+
+mysql> select email from employee where email like "%s%"
+    -> ;
++----------------+
+| email          |
++----------------+
+| SP@GMAIL.COM   |
+| NS@GMAIL.COM   |
+| SB12@GMAIL.COM |
+| sat@gmail.com  |
+| sdt@gmail.com  |
+| sat@gmail.com  |
++----------------+
+6 rows in set (0.00 sec)
+
+mysql> select email from employee where email like "%s%";
++----------------+
+| email          |
++----------------+
+| SP@GMAIL.COM   |
+| NS@GMAIL.COM   |
+| SB12@GMAIL.COM |
+| sat@gmail.com  |
+| sdt@gmail.com  |
+| sat@gmail.com  |
++----------------+
+6 rows in set (0.00 sec)
+
+mysql> select pid,pname,dsc from pos;
+ERROR 1054 (42S22): Unknown column 'dsc' in 'field list'
+mysql> desc pos;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| pid     | int         | NO   | PRI | NULL    |       |
+| pname   | varchar(25) | YES  |     | NULL    |       |
+| posting | varchar(25) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+mysql> select pid,pname,posting from pos where posting = "chennai";
++-----+---------+---------+
+| pid | pname   | posting |
++-----+---------+---------+
+|   1 | MANAGER | CHENNAI |
++-----+---------+---------+
+1 row in set (0.00 sec)
+
+mysql> select email from employee where email like "%s%";
++----------------+
+| email          |
++----------------+
+| SP@GMAIL.COM   |
+| NS@GMAIL.COM   |
+| SB12@GMAIL.COM |
+| sat@gmail.com  |
+| sdt@gmail.com  |
+| sat@gmail.com  |
++----------------+
+6 rows in set (0.00 sec)
+
+mysql> select p.pid,p.pname,p.posting,e.ename,e.email from pos p join employee e on p.pid = e.posid;
++-----+---------------+----------+-------------+-------------------------+
+| pid | pname         | posting  | ename       | email                   |
++-----+---------------+----------+-------------+-------------------------+
+|   2 | DIRECTOR      | MUMBAI   | PRANJAY     | PRANJAYPODDAR@GMAIL.COM |
+|   3 | MANAGER       | DELHI    | SHREYANSH   | SP@GMAIL.COM            |
+|   1 | MANAGER       | CHENNAI  | NISHANT     | NS@GMAIL.COM            |
+|   4 | SR. DEVELOPER | AGRA     | SUBHO       | SB12@GMAIL.COM          |
+|   2 | DIRECTOR      | MUMBAI   | ANKITA      | AK125@GMAIL.COM         |
+|   2 | DIRECTOR      | MUMBAI   | ankittiwari | ak76@gamil.com          |
+|   6 | TECH LEAD     | JABALPUR | rohan       | rohan@gmail.com         |
+|   6 | TECH LEAD     | JABALPUR | sathwik     | sat@gmail.com           |
+|   2 | DIRECTOR      | MUMBAI   | akash       | sdt@gmail.com           |
+|   1 | MANAGER       | CHENNAI  | aman        | sat@gmail.com           |
++-----+---------------+----------+-------------+-------------------------+
+10 rows in set (0.00 sec)
+
+mysql> select p.pid,p.pname,p.posting,e.ename,e.email from pos p join employee e on p.pid = e.posid where p.pid >2 group by e.ename;
++-----+---------------+----------+-----------+-----------------+
+| pid | pname         | posting  | ename     | email           |
++-----+---------------+----------+-----------+-----------------+
+|   3 | MANAGER       | DELHI    | SHREYANSH | SP@GMAIL.COM    |
+|   4 | SR. DEVELOPER | AGRA     | SUBHO     | SB12@GMAIL.COM  |
+|   6 | TECH LEAD     | JABALPUR | rohan     | rohan@gmail.com |
+|   6 | TECH LEAD     | JABALPUR | sathwik   | sat@gmail.com   |
++-----+---------------+----------+-----------+-----------------+
+4 rows in set (0.00 sec)
+
+mysql> select p.pid,p.pname,p.posting,e.ename,e.email from pos p join employee e on p.pid = e.posid where p.pid >=1 group by p.pname;
++-----+---------------+----------+-----------+-------------------------+
+| pid | pname         | posting  | ename     | email                   |
++-----+---------------+----------+-----------+-------------------------+
+|   2 | DIRECTOR      | MUMBAI   | PRANJAY   | PRANJAYPODDAR@GMAIL.COM |
+|   3 | MANAGER       | DELHI    | SHREYANSH | SP@GMAIL.COM            |
+|   4 | SR. DEVELOPER | AGRA     | SUBHO     | SB12@GMAIL.COM          |
+|   6 | TECH LEAD     | JABALPUR | rohan     | rohan@gmail.com         |
++-----+---------------+----------+-----------+-------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select p.pid,p.pname,p.posting,e.ename,e.email from pos p join employee e on p.pid = e.posid group by p.pname;
++-----+---------------+----------+-----------+-------------------------+
+| pid | pname         | posting  | ename     | email                   |
++-----+---------------+----------+-----------+-------------------------+
+|   2 | DIRECTOR      | MUMBAI   | PRANJAY   | PRANJAYPODDAR@GMAIL.COM |
+|   3 | MANAGER       | DELHI    | SHREYANSH | SP@GMAIL.COM            |
+|   4 | SR. DEVELOPER | AGRA     | SUBHO     | SB12@GMAIL.COM          |
+|   6 | TECH LEAD     | JABALPUR | rohan     | rohan@gmail.com         |
++-----+---------------+----------+-----------+-------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select d.did,p.depname,d.dsc,e.ename,e.email from department d join employee e on d.did = e.depid group by p.pname;
+ERROR 1054 (42S22): Unknown column 'p.depname' in 'field list'
+mysql> select d.did,p.depname,d.dsc,e.ename,e.email from department d join employee e on d.did = e.depid group by d.depname;
+ERROR 1054 (42S22): Unknown column 'p.depname' in 'field list'
+mysql> select d.did,d.depname,d.dsc,e.ename,e.email from department d join employee e on d.did = e.depid group by d.depname;
++-----+----------------+--------------------+-----------+-------------------------+
+| did | depname        | dsc                | ename     | email                   |
++-----+----------------+--------------------+-----------+-------------------------+
+|   1 | FINANCE        | DEAL WITH FINANCE  | PRANJAY   | PRANJAYPODDAR@GMAIL.COM |
+|   2 | GRAPHICS       | DEAL WITH GRAPHICS | SHREYANSH | SP@GMAIL.COM            |
+|   4 | TECHNICAL      | DEAL WITH TECH     | NISHANT   | NS@GMAIL.COM            |
+|   3 | HUMAN RESOURCE | DEAL WITH HR       | SUBHO     | SB12@GMAIL.COM          |
+|   5 | HARDWARE       | DEAL WITH HARDWARE | ANKITA    | AK125@GMAIL.COM         |
++-----+----------------+--------------------+-----------+-------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select d.did,d.depname,d.dsc,e.ename,e.email from department d join employee e on d.did = e.depid group by d.depname;
++-----+----------------+--------------------+-----------+-------------------------+
+| did | depname        | dsc                | ename     | email                   |
++-----+----------------+--------------------+-----------+-------------------------+
+|   1 | FINANCE        | DEAL WITH FINANCE  | PRANJAY   | PRANJAYPODDAR@GMAIL.COM |
+|   2 | GRAPHICS       | DEAL WITH GRAPHICS | SHREYANSH | SP@GMAIL.COM            |
+|   4 | TECHNICAL      | DEAL WITH TECH     | NISHANT   | NS@GMAIL.COM            |
+|   3 | HUMAN RESOURCE | DEAL WITH HR       | SUBHO     | SB12@GMAIL.COM          |
+|   5 | HARDWARE       | DEAL WITH HARDWARE | ANKITA    | AK125@GMAIL.COM         |
++-----+----------------+--------------------+-----------+-------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select p.pid,p.pname,p.posting,e.ename,e.email from pos p join employee e on p.pid = e.posid group by p.pname;
++-----+---------------+----------+-----------+-------------------------+
+| pid | pname         | posting  | ename     | email                   |
++-----+---------------+----------+-----------+-------------------------+
+|   2 | DIRECTOR      | MUMBAI   | PRANJAY   | PRANJAYPODDAR@GMAIL.COM |
+|   3 | MANAGER       | DELHI    | SHREYANSH | SP@GMAIL.COM            |
+|   4 | SR. DEVELOPER | AGRA     | SUBHO     | SB12@GMAIL.COM          |
+|   6 | TECH LEAD     | JABALPUR | rohan     | rohan@gmail.com         |
++-----+---------------+----------+-----------+-------------------------+
+4 rows in set (0.00 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
