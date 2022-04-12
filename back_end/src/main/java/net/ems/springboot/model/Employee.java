@@ -33,6 +33,7 @@ public class Employee {
   private String position;
 	
 	@Column(name = "leaves")
+	
 	  private String leaves;
 		
 		
