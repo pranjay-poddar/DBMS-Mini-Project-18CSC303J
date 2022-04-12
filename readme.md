@@ -64,7 +64,10 @@ data of the reason and number of leaves of an employee. The attributes of this e
 <img align="center" src="https://github.com/pranjay-poddar/DBMS-Mini-Project-18CSC303J/blob/master/queries_screenshots/ErDiagram.PNG" height="500px" alt="er diagram">
 </div>
 <br>
+
 ## License
 
+<div align=”center”>
 MIT License
 © Team EMS-2022
+  </div>
