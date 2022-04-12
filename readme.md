@@ -60,6 +60,6 @@ data of the reason and number of leaves of an employee. The attributes of this e
 3. Number of leaves
 
 ### ER-DIAGRAMS
-<img align="center" src="https://github.com/pranjay-poddar/DBMS-Mini-Project-18CSC303J/blob/master/queries_screenshots/ErDiagram.PNG" alt="er diagram">
+<img align="center" src="https://github.com/pranjay-poddar/DBMS-Mini-Project-18CSC303J/blob/master/queries_screenshots/ErDiagram.PNG" height="500px" alt="er diagram">
 <br>
 
