@@ -23,3 +23,43 @@ Employees in Labor Ministry.
 
 The tools and technologies used for developing the software are Angular for frontend, Spring
 Boot for backend and MySQL for Database.
+
+### ENTITIES AND ATTRIBUTES OF THE DATABASE:
+
+* Employee: This entity contains the employee information and the detail data of all the
+employee records within the company. The attributes of this entity are:
+1. Employee Id
+2. First name
+3. Last name
+4. Email id
+5. Address
+6. Phone number
+7. Position
+8. Leaves
+
+* Department: This entity contains the information of the department an employee works in
+and the data of the different departments of the company. The attributes of this entity are:
+1. Department name
+2. Description
+
+* Position: This entity contains the information of the position an employee holds in a
+department and the data of the position of the employee. The attributes of this entity are:
+1. Name
+2. Description
+3. Salary
+
+* Login: This entity contains the login details of an employee in the company and the data of
+login id and passwords of all employees. The attributes of this entity are:
+1. Username
+2. Password
+
+* Leaves: This entity contains the number of leaves an employee takes in the company and the
+data of the reason and number of leaves of an employee. The attributes of this entity are:
+1. Name
+2. Description
+3. Number of leaves
+
+### ER-DIAGRAMS
+<img src="" alt="er diagram">
+<br>
+
