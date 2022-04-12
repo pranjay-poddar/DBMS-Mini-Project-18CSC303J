@@ -69,15 +69,16 @@ data of the reason and number of leaves of an employee. The attributes of this e
 
 <table>
   <tr>
-   
-       <td align="center"><a href="Pranjay"><br/><sub><b>Pranjay Poddar</b></sub></a><br ><p align="center">
-    <a href="https://github.com/pranjay-poddar" alt="My site"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/external-link-line.svg"></a>
-  </p>
+       <td align="center"><a href="Pranjay"><br/><sub><b>Pranjay Poddar</b></sub></a><br />
+       <p align="center">
+       <a href="https://github.com/pranjay-poddar" alt="My site"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/external-link-line.svg"></a>
+</p>
 </td>
     
-     <td align="center"><a href="Darshil"><br/><sub><b>Darshil Shah</b></sub></a><br ><p align="center">
-    <a href="https://github.com/Darshil0612" alt="My site"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/external-link-line.svg"></a>
-  </p>
+     <td align="center"><a href="Darshil"><br/><sub><b>Darshil Shah</b></sub></a><br />
+     <p align="center">
+     <a href="https://github.com/Darshil0612" alt="My site"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/external-link-line.svg"></a>
+</p>
 </td>
    
 <td align="center"><a href="Sathwika"><br /><sub><b>Sathwika Roy</b></sub></a><br />
