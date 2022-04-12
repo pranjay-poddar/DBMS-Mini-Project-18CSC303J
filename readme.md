@@ -60,14 +60,37 @@ data of the reason and number of leaves of an employee. The attributes of this e
 3. Number of leaves
 
 ### ER-DIAGRAMS
-<div align=”center”>
+<div align="center">
 <img align="center" src="https://github.com/pranjay-poddar/DBMS-Mini-Project-18CSC303J/blob/master/queries_screenshots/ErDiagram.PNG" height="500px" alt="er diagram">
 </div>
 <br>
 
-## License
+### Contributors
 
-<div align=”center”>
+<table>
+  <tr>
+   
+       <td align="center"><a href="Pranjay"><br/><sub><b>Pranjay Poddar</b></sub></a><br ><p align="center">
+    <a href="https://github.com/pranjay-poddar" alt="My site"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/external-link-line.svg"></a>
+  </p>
+</td>
+    
+     <td align="center"><a href="Darshil"><br/><sub><b>Darshil Shah</b></sub></a><br ><p align="center">
+    <a href="https://github.com/Darshil0612" alt="My site"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/external-link-line.svg"></a>
+  </p>
+</td>
+   
+<td align="center"><a href="Sathwika"><br /><sub><b>Sathwika Roy</b></sub></a><br />
+    <p align="center">
+    <a href="https://github.com/SathwikaRoy2002" alt="My site"><img src="https://raw.githubusercontent.com/jayehernandez/jayehernandez/3f5402efef9a0ae89211a6e04609558e862ca616/readme/external-link-line.svg"></a>
+  </p>
+  </td>
+
+</tr>
+
+
+### License
+<div align="center">
 MIT License
 © Team EMS-2022
   </div>
