@@ -353,11 +353,3 @@ mysql> select p.pid,p.pname,p.posting,e.ename,e.email from pos p join employee e
 4 rows in set (0.00 sec)
 
 mysql>
-
-
-
-
-
-
-
-
