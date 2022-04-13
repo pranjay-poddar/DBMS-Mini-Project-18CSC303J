@@ -24,7 +24,7 @@ select count(*) from employee where eid > 2;
 
 SELECT AVG(DEPID) FROM EMPLOYEE;
 
- select ename,email,eid,depid from employee where ename like "s%";
+select ename,email,eid,depid from employee where ename like "s%";
 
 select count(did),depname,dsc from department group by depname;
 
