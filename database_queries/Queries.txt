@@ -6,7 +6,6 @@ mysql> select name from emp;
 mysql> notee
 
 
-
 select emp.ename,l.empleave from employee emp join empleaves l on l.empid = emp.eid;
 
 SELECT DEP.DEPNAME,EMP.ENAME FROM DEPARTMENT DEP JOIN EMPLOYEE EMP ON DEP.DID = EMP.DEPID;
