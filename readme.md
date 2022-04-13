@@ -3,7 +3,7 @@
 
 ### TECHNOLOGY USED:
 * Frontend: Angular, Bootstrap
-* Backend: Spring Boot
+* Backend: Spring Boot, Java
 * Database: MySQL
 
 ### ABSTRACT:
